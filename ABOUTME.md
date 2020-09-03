@@ -3,4 +3,4 @@ I haven't been to the course yet unfortunately, but I am very excited to meet my
 
 I love sunny days.
 
-This will create a conflict, my friend.
+A conflict has been created! 
