@@ -436,9 +436,18 @@ order by 2 asc;
 
 select
 	account_id,
-	truncate(sum(case when type = 'PRIJEM' then amount else 0 END),0) as incoming,
-	truncate(sum(case when type = 'VYDAJ' then amount else 0 END),0) as outgoing,
-	truncate(sum(case when type = 'PRIJEM' then amount else 0 END),0) - truncate(sum(case when type = 'VYDAJ' then amount else 0 END),0) as diff
+	truncate(sum(case 
+					when type = 'PRIJEM' then amount 
+					END),0) as incoming,
+	truncate(sum(case 
+					when type = 'VYDAJ' then amount 
+					END),0) as outgoing,
+	truncate(sum(case 	
+					when type = 'PRIJEM' then amount 
+					END) 
+			- sum(case 
+					when type = 'VYDAJ' then amount 
+					END),0) as diff
 
 from
 	bank.trans
