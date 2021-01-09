@@ -130,3 +130,8 @@ dmypy.json
 
 # Mac
 .DS_Store
+
+# Conflicting csv
+TA_restaurants_curated.csv
+tripadvisor_restaurant_ratings_exploded.csv
+tripadvisor_restaurant_ratings.csv
